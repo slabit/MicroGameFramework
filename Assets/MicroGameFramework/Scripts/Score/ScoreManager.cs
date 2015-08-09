@@ -69,6 +69,8 @@ namespace MicroGameFramework
 			{
 				Destroy(gameObject);
 			}
+			
+			Game.onGameOver += OnGameOver;
 		}
 		
 		protected override void OnAwakeEnd()
@@ -77,6 +79,9 @@ namespace MicroGameFramework
 			{
 				instance = null;
 			}
+			
+			if(Game != null)
+				Game.onGameOver -= OnGameOver;
 		}
 
 		protected override void OnStartLevel()
@@ -91,6 +96,11 @@ namespace MicroGameFramework
 			{
 				onScoreChange();
 			}
+		}
+		
+		void OnGameOver()
+		{
+			LeaderboardManager.Instance.PostScore(Score);
 		}
 	}
 }
