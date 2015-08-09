@@ -5,8 +5,8 @@ using System;
 
 namespace MicroGameFramework
 {
-	[AddComponentMenu("MicroGameFramework/GameOverScreenBestScoreCounterDisplay")]
-	public class GameOverScreenBestScoreCounterDisplay : MonoBehaviour
+	[AddComponentMenu("MicroGameFramework/GameOver_BestScoreCounter")]
+	public class GameOver_BestScoreCounter : MonoBehaviour
 	{
 		public UnityEngine.UI.Text uiText;
 

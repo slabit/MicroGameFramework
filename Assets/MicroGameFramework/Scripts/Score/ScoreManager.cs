@@ -47,6 +47,9 @@ namespace MicroGameFramework
 
 		public void IncrementScore()
 		{
+			if(Game.GameOver)
+				return;
+				
 			++score;
 
 			if(score > BestScore)

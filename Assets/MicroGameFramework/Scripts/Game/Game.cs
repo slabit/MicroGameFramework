@@ -50,6 +50,14 @@ namespace MicroGameFramework
 			}
 		}
 		
+		public bool GameOver
+		{
+			get
+			{
+				return gameOver;
+			}
+		}
+		
 		public void NotifyGameOver()
 		{
 			if(gameOver)
