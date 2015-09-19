@@ -37,7 +37,7 @@ namespace MicroGameFramework
 				adMob_Interstitial.Show();
 				
 				Debug.Log("Request new interstitial");
-				adMob_Interstitial.LoadAd(AdMob_CreateAdRequest());
+				AdMob_CreateInterstitial();
 	        }
 	        else
 	        {
@@ -69,14 +69,7 @@ namespace MicroGameFramework
 		public AdRequest AdMob_CreateAdRequest()
 		{
 			return new AdRequest.Builder()
-				.AddTestDevice(AdRequest.TestDeviceSimulator)
-					.AddTestDevice("7D87C54ED341E851A7DA7E4E5CAE6313")
-					.AddKeyword("game")
-					.SetGender(Gender.Male)
-					.SetBirthday(new DateTime(1985, 1, 1))
-					.TagForChildDirectedTreatment(false)
-					.AddExtra("color_bg", "9B30FF")
-					.Build();
+				.AddTestDevice(AdRequest.TestDeviceSimulator).AddKeyword("game").Build();
 		}
 		
 		public void AdMob_CreateInterstitial()
