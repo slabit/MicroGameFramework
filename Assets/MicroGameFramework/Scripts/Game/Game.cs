@@ -7,9 +7,9 @@ namespace MicroGameFramework
 	[AddComponentMenu("MicroGameFramework/Game")]
 	public class Game : MonoBehaviour 
 	{
-		public System.Action onStartLevel;
+		public static System.Action onStartLevel;
 
-		public System.Action onGameOver;
+		public static System.Action onGameOver;
 
 		List<GameBehaviour> gameBehaviours = new List<GameBehaviour>();
 

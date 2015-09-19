@@ -6,7 +6,7 @@ using MicroGameFramework;
 namespace MicroGameFrameworkSample
 {
 	[AddComponentMenu("MicroGameFrameworkSample/ButtonGameOver")]
-	public class ButtonGameOver : MonoBehaviour
+	public class ButtonLose : MonoBehaviour
 	{
 		public void OnClick()
 		{
